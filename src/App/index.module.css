@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  padding: 1px;
+  background-color: #167987;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  color: #ddfbff;
+  font-size: 4rem;
+  font-family: "Bungee Shade";
+  margin: -20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 50px;
+  color: white;
+}
+
+.footer a:visited {
+  color: white;
+}
+
+.container {
+  padding: 30px;
+}
+
+.desc {
+  color: white;
+  padding: 0px 60px;
+  font-size: 1.3rem;
+}

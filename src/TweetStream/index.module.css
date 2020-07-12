@@ -1,0 +1,27 @@
+#tweetSvg {
+  height: 225px;
+  box-shadow: inset -1px -1px 10px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid black;
+
+  flex-basis: 700px;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-10%, 0);
+  }
+  to {
+    transform: translate(110%, 0);
+  }
+}
+
+.tweetBubble {
+  animation: move 2s linear;
+  stroke: black;
+  stroke-width: 0px;
+}
+
+.tweetBubble:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

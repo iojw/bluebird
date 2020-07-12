@@ -1,0 +1,20 @@
+.container {
+  flex-basis: 400px;
+  flex-shrink: 0;
+  padding-top: 10px;
+  height: 225px;
+  text-align: center;
+}
+
+.gauge {
+  width: 100%;
+}
+
+.gauge g {
+  stroke: black;
+  stroke-width: 0px;
+}
+
+.text {
+  font-size: 1.2rem;
+}
