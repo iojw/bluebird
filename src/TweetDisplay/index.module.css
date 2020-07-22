@@ -1,18 +1,18 @@
 .container {
-  flex-basis: 450px;
-  height: 225px;
+  flex-basis: 100%;
+  max-width: 450px;
+  height: 14rem;
 }
 
 .tweet {
   text-align: left;
-  color: black;
   text-decoration: none;
+  color: black;
+  overflow: hidden;
+
   height: 100%;
   display: block;
-  padding: 20px;
-  box-sizing: border-box;
-
-  overflow: hidden;
+  padding: 1.2rem;
 }
 
 .tweet:hover {
@@ -20,22 +20,13 @@
 }
 
 .header {
-  margin: -10px;
-  padding: 10px;
+  margin: -0.5rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
-.header img {
-  border-radius: 50%;
-  height: 24px;
-  width: 24px;
-  object-fit: cover;
-  float: left;
-  margin-right: 5px;
-}
-
 .text {
-  padding-top: 20px;
+  padding-top: 1.2rem;
   font-size: 1.2rem;
   word-wrap: break-word;
 }
@@ -52,6 +43,6 @@
 
 .emptyMessage {
   font-size: 1.3rem;
-  padding-top: 95px;
+  padding-top: 6rem;
   text-align: center;
 }

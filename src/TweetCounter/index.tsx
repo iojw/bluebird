@@ -4,6 +4,7 @@ import {
 } from "react-circular-progressbar";
 import React from "react";
 import styles from "./index.module.css";
+import {RADIAL_TRANSITION_DURATION} from "../constants";
 
 interface TweetCounterProps {
   tweets: number;
@@ -17,8 +18,8 @@ export const TweetCounter = React.memo(
         <CircularProgressbarWithChildren
           value={tweets % 100}
           styles={buildStyles({
-            pathTransitionDuration: 0.2,
-            pathColor: "#167987",
+            pathTransitionDuration: RADIAL_TRANSITION_DURATION,
+            pathColor: "#629399",
             strokeLinecap: "round",
           })}
           strokeWidth={4}

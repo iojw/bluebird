@@ -5,30 +5,22 @@
   align-items: center;
 }
 
-.controls {
-  width: 600px;
-  text-align: center;
-}
-
-.button {
-  padding: 10px 40px;
-  border-radius: 10px;
-  margin: 5px;
-  border: 1px solid black;
-  background-color: #23272b;
-  color: white;
-  font-weight: 600;
-}
-
 .card {
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  background-color: #ddfbff;
-  margin: 15px;
+  background-color: #fff;
+
+  margin: 1rem;
   box-sizing: border-box;
 }
 
-.flexBreak {
+.stream {
+  border-radius: 3px;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-break {
   flex-basis: 100%;
   width: 0;
 }

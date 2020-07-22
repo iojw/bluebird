@@ -1,33 +1,42 @@
 .header {
-  text-align: center;
-  padding: 1px;
-  background-color: #167987;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: var(--complement);
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header h1 {
-  color: #ddfbff;
+  color: var(--blue);
+  margin: 2rem;
   font-size: 4rem;
-  font-family: "Bungee Shade";
-  margin: -20px;
+  font-family: Playfair Display, serif;
+}
+
+.header .desc {
+  color: RGB(209, 202, 194);
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+  max-width: 1280px;
+}
+
+.header-wave,
+.footer-wave {
+  display: block;
+  margin-bottom: 4rem;
+  fill: var(--complement);
 }
 
 .footer {
   text-align: center;
-  padding: 20px 50px;
-  color: white;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
 }
 
+.footer,
+.footer a,
 .footer a:visited {
-  color: white;
-}
-
-.container {
-  padding: 30px;
-}
-
-.desc {
-  color: white;
-  padding: 0px 60px;
-  font-size: 1.3rem;
+  color: var(--complement);
 }

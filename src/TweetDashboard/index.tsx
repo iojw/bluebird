@@ -62,15 +62,15 @@ export const TweetDashboard = () => {
         score={exactScore}
         totalTweets={state.totalTweets}
       />
+      <TweetCounter className={styles.card} tweets={state.totalTweets} />
       <TweetDisplay
         className={styles.card}
         tweet={selected}
         emptyMessage="Touch a tweet below to view it here"
       />
-      <TweetCounter className={styles.card} tweets={state.totalTweets} />
-      <div className={styles.flexBreak} />
+      <div className={styles["flex-break"]} />
       <TweetStream
-        className={styles.card}
+        className={styles.stream}
         tweets={state.tweets}
         onAnimationEnd={(tweet) => {
           dispatch({

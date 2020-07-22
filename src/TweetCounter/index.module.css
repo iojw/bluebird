@@ -1,10 +1,9 @@
 .container {
-  flex-basis: 225px;
-  padding: 20px;
-  height: 225px;
-  flex-shrink: 0;
+  flex-basis: 14rem;
+  height: 14rem;
+  padding: 1.3rem;
 }
 
 .progressBarText {
-  font-size: 20px;
+  font-size: 1.3rem;
 }

@@ -1,9 +1,13 @@
 .container {
-  flex-basis: 400px;
-  flex-shrink: 0;
-  padding-top: 10px;
-  height: 225px;
+  flex-basis: 100%;
+  max-width: 400px;
+  height: 14rem;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .gauge {

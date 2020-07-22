@@ -25,7 +25,7 @@ const GaugeDisplay = React.memo(({percentage}: {percentage: number}) => (
     hideText={true}
     animDelay={0}
     arcWidth={0.25}
-    arcPadding={0.0}
+    arcPadding={0.01}
     colors={COLOUR_RANGE}
     cornerRadius={2}
     // Default inline style is width 100%, remove this to set via CSS instead
@@ -49,7 +49,7 @@ export const TweetGauge = ({
     roundedPercentage = Math.round(percentage * 100) / 100;
   }
 
-  const sentimentPercentage = `${score >= 0 ? "+" : "-"}${(
+  const sentimentPercentage = `${score >= 0 ? "+" : ""}${(
     (score / SENTIMENT_RANGE) *
     100
   ).toFixed(2)}%`;
