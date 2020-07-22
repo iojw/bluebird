@@ -8,7 +8,9 @@ export const createTweetFromResponse = (message: ITweetResponse): ITweet => {
   //   .then((blob) => URL.createObjectURL(blob))
   //   .then((url) =>
 
-  const sanitizedText = message.text.replace(/@\S+/gi, "");
+  const sanitizedText = message.text
+    .replace(/@\S+/gi, "")
+    .replace(/https:\/\/t.co\/\S+$/gi, "");
 
   return {
     url: `https://twitter.com/${message.user.screen_name}/status/${message.id_str}`,
