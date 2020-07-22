@@ -9,7 +9,10 @@
   flex-basis: 100%;
   max-width: 992px;
 
-  flex-basis: 700px;
+  /* For the loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes move {
@@ -19,6 +22,10 @@
   to {
     transform: translate(110%, 0);
   }
+}
+
+.spinner {
+  opacity: 0.3;
 }
 
 .tweetBubble {
