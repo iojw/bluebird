@@ -34,6 +34,10 @@
   stroke-width: 0px;
 }
 
+.paused .tweetBubble {
+  animation-play-state: paused;
+}
+
 .tweetBubble:hover {
   cursor: pointer;
   opacity: 0.8;

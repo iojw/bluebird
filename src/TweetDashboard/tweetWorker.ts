@@ -1,5 +1,6 @@
 import {ITweetResponse, ITweetEvent} from "../interfaces";
 import {createTweetFromResponse} from "./tweetUtils";
+import {WorkerActions} from "./actions";
 
 // For the PubNub script
 // eslint-disable-next-line no-restricted-globals
@@ -22,6 +23,20 @@ const handleData = (response: ITweetResponse) => {
   // TODO: Handle neutral tweets?
   const tweet = createTweetFromResponse(response);
   ctx.postMessage(tweet);
+};
+
+ctx.onmessage = (msg: MessageEvent) => {
+  switch (msg.data) {
+    case WorkerActions.START:
+      pubnub.subscribe({
+        channels: ["pubnub-twitter"],
+      });
+      break;
+    case WorkerActions.STOP:
+      pubnub.unsubscribe({
+        channels: ["pubnub-twitter"],
+      });
+  }
 };
 
 pubnub.addListener({

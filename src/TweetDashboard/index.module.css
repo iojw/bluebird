@@ -20,6 +20,23 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.button {
+  background-color: white;
+  border: 0;
+  width: 6rem;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+.button:active {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+
 .flex-break {
   flex-basis: 100%;
   width: 0;

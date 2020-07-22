@@ -16,3 +16,8 @@ export interface IClearTweetAction {
 }
 
 export type TweetDashboardActionTypes = IAddTweetAction | IClearTweetAction;
+
+export enum WorkerActions {
+  STOP = "STOP",
+  START = "START",
+}

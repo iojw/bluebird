@@ -13,6 +13,7 @@ import Spinner from "react-spinkit";
 
 interface ITweetStreamProps {
   tweets: ITweet[];
+  paused: boolean;
   onAnimationEnd: (tweet: ITweet) => void;
   onSelectTweet: (tweet: ITweet) => void;
   className?: string;
@@ -20,19 +21,20 @@ interface ITweetStreamProps {
 
 export const TweetStream = ({
   tweets,
+  paused,
   onAnimationEnd,
   onSelectTweet,
   className,
 }: ITweetStreamProps) => (
   <div className={`${className ? className : ""} ${styles.container}`}>
-    {tweets.length === 0 ? (
+    {tweets.length === 0 && !paused ? (
       <Spinner
         className={styles.spinner}
         name="ball-scale-ripple-multiple"
         color="white"
       />
     ) : (
-      <svg id={styles.tweetSvg}>
+      <svg id={styles.tweetSvg} className={paused ? styles.paused : ""}>
         {/* Credit to https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3 */}
         {/* <filter id="dropshadow" height="150%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="0" />

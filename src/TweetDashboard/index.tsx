@@ -2,7 +2,7 @@ import React, {useEffect, useReducer, useState} from "react";
 import {TweetGauge} from "../TweetGauge";
 import {TweetStream} from "../TweetStream";
 import {ITweet, ITweetResponse} from "../interfaces";
-import {TweetDashboardActions} from "./actions";
+import {TweetDashboardActions, WorkerActions} from "./actions";
 import {TweetDashboardReducer} from "./reducer";
 import {TweetDisplay} from "../TweetDisplay";
 import styles from "./index.module.css";
@@ -12,6 +12,8 @@ import {createTweetFromResponse} from "./tweetUtils";
 import PubNub from "pubnub";
 import {TweetCounter} from "../TweetCounter";
 
+const worker = new Worker();
+
 export const TweetDashboard = () => {
   const [state, dispatch] = useReducer(TweetDashboardReducer, {
     totalTweets: 0,
@@ -19,6 +21,17 @@ export const TweetDashboard = () => {
     tweets: [],
   });
   const [selected, setSelected] = useState<ITweet>();
+  const [paused, setPaused] = useState(false);
+
+  const start = () => {
+    worker.postMessage(WorkerActions.START);
+    setPaused(false);
+  };
+
+  const pause = () => {
+    worker.postMessage(WorkerActions.STOP);
+    setPaused(true);
+  };
 
   useEffect(() => {
     if (!Worker) {
@@ -46,7 +59,6 @@ export const TweetDashboard = () => {
         });
     }
 
-    const worker = new Worker();
     worker.onmessage = (event: MessageEvent) => {
       dispatch({type: TweetDashboardActions.ADD_TWEET, payload: event.data});
     };
@@ -72,6 +84,7 @@ export const TweetDashboard = () => {
       <TweetStream
         className={styles.stream}
         tweets={state.tweets}
+        paused={paused}
         onAnimationEnd={(tweet) => {
           dispatch({
             type: TweetDashboardActions.CLEAR_TWEET,
@@ -80,15 +93,12 @@ export const TweetDashboard = () => {
         }}
         onSelectTweet={(tweet) => setSelected(tweet)}
       />
-      {/* TODO: Update for Worker */}
-      {/* <div className={styles.controls}>
-        <button className={styles.button} onClick={stopTweets}>
-          STOP
+      <div className={styles["flex-break"]} />
+      <div className={styles.controls}>
+        <button className={styles.button} onClick={paused ? start : pause}>
+          {paused ? "Start" : "Pause"}
         </button>
-        <button className={styles.button} onClick={startTweets}>
-          START
-        </button>
-      </div> */}
+      </div>
     </div>
   );
 };
