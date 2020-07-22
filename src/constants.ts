@@ -27,3 +27,6 @@ export const SECOND_SAMPLE_BREAKPOINT = 100;
 
 // Counter
 export const RADIAL_TRANSITION_DURATION = 0.2; // in seconds
+
+// Display
+export const TWEET_EXPIRY = 20; // in seconds

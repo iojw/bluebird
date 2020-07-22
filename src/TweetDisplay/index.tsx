@@ -1,7 +1,7 @@
 import {ITweet} from "../interfaces";
 import React from "react";
 import styles from "./index.module.css";
-import {COLOUR_RANGE, SENTIMENT_RANGE} from "../constants";
+import {COLOUR_RANGE, SENTIMENT_RANGE, TWEET_EXPIRY} from "../constants";
 import {getPercentageForRange} from "../utils";
 
 interface ITweetDisplayProps {
@@ -46,7 +46,7 @@ export const TweetDisplay = ({
   emptyMessage,
 }: ITweetDisplayProps) => (
   <div className={`${styles.container} ${className ? className : ""}`}>
-    {tweet ? (
+    {tweet && (Date.now() - tweet.time) / 1000 < TWEET_EXPIRY ? (
       <>
         <Tweet tweet={tweet} />
       </>
