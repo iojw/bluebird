@@ -1,10 +1,13 @@
 import React from "react";
 import GaugeChart from "react-gauge-chart";
+import chroma from "chroma-js";
 import {
-  COLOUR_RANGE,
   SENTIMENT_RANGE,
   FIRST_SAMPLE_BREAKPOINT,
   SECOND_SAMPLE_BREAKPOINT,
+  NO_OF_COLOURS,
+  SCALE_MODE,
+  COLOUR_SCALE,
 } from "../constants";
 import styles from "./index.module.css";
 import {getPercentageForRange} from "../utils";
@@ -20,13 +23,13 @@ const GaugeDisplay = React.memo(({percentage}: {percentage: number}) => (
   <GaugeChart
     id="gauge"
     className={styles.gauge}
-    nrOfLevels={COLOUR_RANGE.length}
+    nrOfLevels={NO_OF_COLOURS}
     percent={percentage}
     hideText={true}
     animDelay={0}
     arcWidth={0.25}
     arcPadding={0.01}
-    colors={COLOUR_RANGE}
+    colors={chroma.scale(COLOUR_SCALE).mode(SCALE_MODE).colors(NO_OF_COLOURS)}
     cornerRadius={2}
     // Default inline style is width 100%, remove this to set via CSS instead
     style={{}}

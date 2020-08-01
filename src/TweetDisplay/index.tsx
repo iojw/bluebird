@@ -1,8 +1,14 @@
 import {ITweet} from "../interfaces";
 import React from "react";
 import styles from "./index.module.css";
-import {COLOUR_RANGE, SENTIMENT_RANGE, TWEET_EXPIRY} from "../constants";
+import {
+  SENTIMENT_RANGE,
+  TWEET_EXPIRY,
+  COLOUR_SCALE,
+  SCALE_MODE,
+} from "../constants";
 import {getPercentageForRange} from "../utils";
+import chroma from "chroma-js";
 
 interface ITweetDisplayProps {
   tweet: ITweet | undefined;
@@ -12,13 +18,10 @@ interface ITweetDisplayProps {
 
 const Tweet = ({tweet}: {tweet: ITweet}) => {
   const relativeTime = Math.round((Date.now() - tweet.time) / 1000);
-  const sentimentColour =
-    COLOUR_RANGE[
-      Math.floor(
-        getPercentageForRange(tweet.sentiment, SENTIMENT_RANGE) *
-          COLOUR_RANGE.length
-      )
-    ];
+  const sentimentColour = chroma
+    .scale(COLOUR_SCALE)
+    .mode(SCALE_MODE)(getPercentageForRange(tweet.sentiment, SENTIMENT_RANGE))
+    .hex();
 
   return (
     <a

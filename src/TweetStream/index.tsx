@@ -2,14 +2,16 @@ import {ITweet} from "../interfaces";
 import styles from "./index.module.css";
 import React from "react";
 import {
-  COLOUR_RANGE,
   SENTIMENT_RANGE,
   MAX_BUBBLE_RADIUS,
   MIN_BUBBLE_RADIUS,
   AVERAGE_TWEET_CHAR,
+  SCALE_MODE,
+  COLOUR_SCALE,
 } from "../constants";
 import {getPercentageForRange} from "../utils";
 import Spinner from "react-spinkit";
+import chroma from "chroma-js";
 
 interface ITweetStreamProps {
   tweets: ITweet[];
@@ -58,14 +60,12 @@ export const TweetStream = ({
                 MIN_BUBBLE_RADIUS
               }
               cy={`${Number(tweet.id) % 100}%`}
-              fill={
-                COLOUR_RANGE[
-                  Math.floor(
-                    getPercentageForRange(tweet.sentiment, SENTIMENT_RANGE) *
-                      COLOUR_RANGE.length
-                  )
-                ]
-              }
+              fill={chroma
+                .scale(COLOUR_SCALE)
+                .mode(SCALE_MODE)(
+                  getPercentageForRange(tweet.sentiment, SENTIMENT_RANGE)
+                )
+                .hex()}
               onAnimationEnd={() => onAnimationEnd(tweet)}
               onMouseEnter={() => onSelectTweet(tweet)}
               onTouchStart={() => onSelectTweet(tweet)}
