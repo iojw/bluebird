@@ -4,7 +4,8 @@
 }
 
 .container {
-  height: 250px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: inset -1px -1px 10px 0px rgba(0, 0, 0, 0.5);
   flex-basis: 100%;
   max-width: 992px;
@@ -40,5 +41,4 @@
 
 .tweetBubble:hover {
   cursor: pointer;
-  opacity: 0.8;
 }
