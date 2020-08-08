@@ -1,6 +1,5 @@
 import {ITweetResponse, ITweet} from "../interfaces";
 import {calculateSentiment} from "./sentiment";
-import {SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG} from "constants";
 
 export const createTweetFromResponse = (message: ITweetResponse): ITweet => {
   // Fetch profile picture and create a local URL for it
