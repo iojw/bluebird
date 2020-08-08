@@ -5,17 +5,28 @@ import {TweetDashboard} from "../TweetDashboard";
 const App = () => (
   <>
     <header className={styles.header}>
-      <h1>bluebird</h1>
+      <h1 className={styles.bluebird}>bluebird</h1>
       <div className={styles.desc}>
-        Lorem ipsum dolor sit amt, consectetur adipiscing elit. Sed egestas diam
-        vitae ligula aliquet, in commodo odio commodo. Pellentesque ullamcorper
-        at ligula sed laoreet. In arcu felis, tempor vitae urna vitae, placerat
-        eleifend orci. Suspendisse eget magna consectetur, ultrices lorem sed,
-        venenatis dolor. Sed pharetra nisl convallis, pharetra lacus ac, laoreet
-        dolor. Suspendisse risus mi, maximus ut varius at, dapibus sed eros. In
-        aliquam ut ex eu tincidunt. Morbi sapien mauris, condimentum at justo
-        in, fermentum sagittis sem. Nulla sollicitudin lacus metus, quis
-        imperdiet odio luctus malesuada.
+        <p>350,000 tweets are sent on Twitter every minute. </p>
+        <p>
+          Just imagine that: 350,000 unique thoughts from different people
+          around the world.
+        </p>
+        <p>
+          <span className={styles.bluebird}>bluebird</span> aims to offer a
+          glimpse into the sheer enormity of Twitter as a social network. Every
+          circle you see below represents a tweet that has just been posted in
+          the last few seconds. Its colour signifies its sentiment (calculated
+          based on&nbsp;
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf"
+          >
+            VADER
+          </a>
+          ) &nbsp;while its size corresponds to the length of the tweet!
+        </p>
       </div>
     </header>
     <svg

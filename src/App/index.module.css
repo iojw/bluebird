@@ -9,17 +9,24 @@
 }
 
 .header h1 {
-  color: var(--blue);
   margin: 2rem;
   font-size: 4rem;
+}
+
+.header .bluebird {
+  color: var(--blue);
   font-family: Playfair Display, serif;
 }
 
 .header .desc {
-  color: RGB(209, 202, 194);
   padding-bottom: 0.5rem;
   font-size: 1.25rem;
   max-width: 1280px;
+}
+
+.header .desc,
+.header .desc a {
+  color: RGB(209, 202, 194);
 }
 
 .header-wave,
