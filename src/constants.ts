@@ -4,9 +4,9 @@ export const SENTIMENT_RANGE = 1;
 
 // Stream
 export const MAX_TWEET_BUBBLES = 30;
-export const MIN_BUBBLE_RADIUS = 20;
-export const MAX_BUBBLE_RADIUS = 40;
-export const AVERAGE_TWEET_CHAR = 140;
+export const MIN_BUBBLE_RADIUS = 30;
+export const MAX_BUBBLE_RADIUS = 45;
+export const AVERAGE_TWEET_CHAR = 200;
 
 // Gauge
 export const FIRST_SAMPLE_BREAKPOINT = 5;
