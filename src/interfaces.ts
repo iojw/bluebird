@@ -3,6 +3,7 @@ export interface ITweetEvent {
 }
 
 export interface ITweetResponse {
+  extended_tweet?: {full_text: string};
   text: string;
   user: {
     screen_name: string;
