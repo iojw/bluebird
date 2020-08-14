@@ -19,6 +19,3 @@ export const NO_OF_COLOURS = 9;
 
 // Counter
 export const RADIAL_TRANSITION_DURATION = 0.2; // in seconds
-
-// Display
-export const TWEET_EXPIRY = 20; // in seconds
