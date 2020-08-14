@@ -36,6 +36,12 @@
   fill: var(--complement);
 }
 
+.header,
+.header-wave {
+  position: relative;
+  z-index: 200;
+}
+
 .footer {
   text-align: center;
   margin-top: 10rem;

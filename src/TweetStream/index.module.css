@@ -1,6 +1,10 @@
 #tweetSvg {
   width: 100%;
   height: 100%;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 .container {
@@ -32,6 +36,9 @@
   animation: move 2s linear;
   stroke: black;
   stroke-width: 0px;
+
+  position: relative;
+  z-index: 100;
 }
 
 .paused .tweetBubble {
