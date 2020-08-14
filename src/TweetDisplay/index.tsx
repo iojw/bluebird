@@ -12,6 +12,7 @@ import chroma from "chroma-js";
 
 interface ITweetDisplayProps {
   tweet: ITweet | undefined;
+  paused: boolean;
   emptyMessage: string;
   className?: string;
 }
@@ -46,10 +47,11 @@ const Tweet = ({tweet}: {tweet: ITweet}) => {
 export const TweetDisplay = ({
   className,
   tweet,
+  paused,
   emptyMessage,
 }: ITweetDisplayProps) => (
   <div className={`${styles.container} ${className ? className : ""}`}>
-    {tweet && (Date.now() - tweet.time) / 1000 < TWEET_EXPIRY ? (
+    {tweet && ((Date.now() - tweet.time) / 1000 < TWEET_EXPIRY || paused) ? (
       <>
         <Tweet tweet={tweet} />
       </>

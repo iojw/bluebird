@@ -78,6 +78,7 @@ export const TweetDashboard = () => {
       <TweetDisplay
         className={styles.card}
         tweet={selected}
+        paused={paused}
         emptyMessage="Touch a tweet below to view it here"
       />
       <div className={styles["flex-break"]} />
