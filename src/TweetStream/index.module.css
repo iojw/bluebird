@@ -18,10 +18,10 @@
 
 @keyframes move {
   from {
-    transform: translate(-5%, 0);
+    transform: translate(-10%, 0);
   }
   to {
-    transform: translate(105%, 0);
+    transform: translate(110%, 0);
   }
 }
 
