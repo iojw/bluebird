@@ -1,7 +1,7 @@
 .container {
   flex-basis: 100%;
-  max-width: 450px;
-  height: 14rem;
+  max-width: 500px;
+  height: 16rem;
 }
 
 .tweet {
@@ -44,6 +44,7 @@
 
 .emptyMessage {
   font-size: 1.3rem;
-  padding-top: 6rem;
+  padding-top: 7rem;
   text-align: center;
+  font-style: italic;
 }

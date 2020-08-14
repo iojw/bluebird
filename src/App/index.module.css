@@ -32,13 +32,13 @@
 .header-wave,
 .footer-wave {
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   fill: var(--complement);
 }
 
 .footer {
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
 }
 

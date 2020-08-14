@@ -3,12 +3,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  margin-top: -12rem;
-  padding-top: 14rem;
-  margin-bottom: -12em;
-  padding-bottom: 14rem;
-  position: relative;
 }
 
 .card {

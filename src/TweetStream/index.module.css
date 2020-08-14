@@ -4,7 +4,7 @@
 }
 
 .container {
-  height: 300px;
+  height: 350px;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: inset -1px -1px 10px 0px rgba(0, 0, 0, 0.5);
   flex-basis: 100%;
@@ -18,10 +18,10 @@
 
 @keyframes move {
   from {
-    transform: translate(-10%, 0);
+    transform: translate(-5%, 0);
   }
   to {
-    transform: translate(110%, 0);
+    transform: translate(105%, 0);
   }
 }
 
@@ -30,9 +30,10 @@
 }
 
 .tweetBubble {
-  animation: move 2s linear;
+  animation-name: move;
+  animation-timing-function: linear;
   stroke: black;
-  stroke-width: 0px;
+  stroke-width: 2.5px;
 }
 
 .paused .tweetBubble {

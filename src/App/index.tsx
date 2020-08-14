@@ -14,9 +14,9 @@ const App = () => (
         </p>
         <p>
           <span className={styles.bluebird}>bluebird</span> aims to offer a
-          glimpse into the sheer enormity of Twitter as a social network. Every
-          circle you see below represents a tweet that has just been posted in
-          the last few seconds. Its colour signifies its sentiment (calculated
+          glimpse into the sheer size of Twitter as a social network. Every
+          bubble you see below represents a tweet that has just been posted in
+          the last few seconds. Its colour signifies its sentiment from the colour range of blue to yellow (calculated
           based on&nbsp;
           <a
             target="_blank"
@@ -25,8 +25,8 @@ const App = () => (
           >
             VADER
           </a>
-          ) &nbsp;while its size corresponds to the length of the tweet!
-        </p>
+          )&nbsp;while its size corresponds to the length of the tweet. The average sentiment of all processed tweets during your current session is also calculated. 
+        </p><p>Play around with this real-time, constant stream of tweets and its corresponding metrics!</p>
       </div>
     </header>
     <svg

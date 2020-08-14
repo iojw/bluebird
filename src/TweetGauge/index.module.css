@@ -1,7 +1,7 @@
 .container {
   flex-basis: 100%;
-  max-width: 400px;
-  height: 14rem;
+  max-width: 450px;
+  height: 16rem;
   text-align: center;
 
   display: flex;
