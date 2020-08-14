@@ -8,7 +8,8 @@
   text-align: left;
   text-decoration: none;
   color: black;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   height: 100%;
   display: block;
