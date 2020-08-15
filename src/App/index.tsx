@@ -16,8 +16,8 @@ const App = () => (
           <span className={styles.bluebird}>bluebird</span> aims to offer a
           glimpse into the sheer size of Twitter as a social network. Every
           bubble you see below represents a tweet that has just been posted in
-          the last few seconds. Its colour signifies its sentiment from the colour range of blue to yellow (calculated
-          based on&nbsp;
+          the last few seconds. Its colour signifies its sentiment from the
+          colour range of blue to yellow (calculated based on&nbsp;
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -25,8 +25,14 @@ const App = () => (
           >
             VADER
           </a>
-          )&nbsp;while its size corresponds to the length of the tweet. The average sentiment of all processed tweets during your current session is also calculated. 
-        </p><p>Play around with this real-time, constant stream of tweets and its corresponding metrics!</p>
+          )&nbsp;while its size corresponds to the length of the tweet. The
+          average sentiment of all processed tweets during your current session
+          is also calculated.
+        </p>
+        <p>
+          Play around with this real-time, constant stream of tweets and its
+          corresponding metrics!
+        </p>
       </div>
     </header>
     <svg
@@ -55,6 +61,14 @@ const App = () => (
       © 2020 —&nbsp;
       <a href="https://isaacong.me" target="_blank" rel="noopener noreferrer">
         Isaac Ong
+      </a>
+      &nbsp;|&nbsp;
+      <a
+        href="https://github.com/iojw/bluebird"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Source Repository
       </a>
     </footer>
   </>
