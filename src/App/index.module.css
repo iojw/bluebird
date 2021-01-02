@@ -34,11 +34,12 @@
   display: block;
   margin-bottom: 2rem;
   fill: var(--complement);
+  z-index: 200;
 }
 
 .footer {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 

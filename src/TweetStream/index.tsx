@@ -14,7 +14,6 @@ import {
   MAX_RAND_SATURATION,
 } from "../constants";
 import {getPercentageForRange} from "../utils";
-import Spinner from "react-spinkit";
 import chroma from "chroma-js";
 
 interface ITweetBubbleProps {
@@ -53,7 +52,8 @@ const TweetBubble = ({
           (MAX_BUBBLE_RADIUS - MIN_BUBBLE_RADIUS) +
         MIN_BUBBLE_RADIUS
       }
-      cy={`${Number(tweet.id) % 100}%`}
+      // Prevent clipping by constraining range to [5%, 95%]
+      cy={`${(Number(tweet.id) % 100) * 0.9 + 5}%`}
       fill={colour}
       onClick={() => window.open(tweet.url)}
       onAnimationEnd={() => onAnimationEnd(tweet)}
@@ -90,23 +90,15 @@ export const TweetStream = ({
   className,
 }: ITweetStreamProps) => (
   <div className={`${className ? className : ""} ${styles.container}`}>
-    {tweets.length === 0 && !paused ? (
-      <Spinner
-        className={styles.spinner}
-        name="ball-scale-ripple-multiple"
-        color="white"
-      />
-    ) : (
-      <svg id={styles.tweetSvg} className={paused ? styles.paused : ""}>
-        {tweets.map((tweet) => (
-          <TweetBubble
-            key={tweet.id}
-            tweet={tweet}
-            onAnimationEnd={onAnimationEnd}
-            onSelectTweet={onSelectTweet}
-          />
-        ))}
-      </svg>
-    )}
+    <svg id={styles.tweetSvg} className={paused ? styles.paused : ""}>
+      {tweets.map((tweet) => (
+        <TweetBubble
+          key={tweet.id}
+          tweet={tweet}
+          onAnimationEnd={onAnimationEnd}
+          onSelectTweet={onSelectTweet}
+        />
+      ))}
+    </svg>
   </div>
 );

@@ -4,11 +4,8 @@
 }
 
 .container {
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: inset -1px -1px 10px 0px rgba(0, 0, 0, 0.5);
+  height: 100%;
   flex-basis: 100%;
-  max-width: 850px;
 
   /* For the loader */
   display: flex;
@@ -25,15 +22,11 @@
   }
 }
 
-.spinner {
-  opacity: 0.3;
-}
-
 .tweetBubble {
   animation-name: move;
   animation-timing-function: linear;
   stroke: black;
-  stroke-width: 2px;
+  stroke-width: 1.5px;
 }
 
 .paused .tweetBubble {

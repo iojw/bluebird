@@ -1,33 +1,55 @@
 .dashboard {
+  height: 550px;
   display: flex;
+  position: relative;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .card {
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid #f0f2f4;
+  opacity: 0.95;
 
   margin: 1rem;
   box-sizing: border-box;
+  position: relative;
+  z-index: 200;
 }
 
 .stream {
+  position: absolute;
+  top: -5rem;
+  left: -1rem;
+  right: -1rem;
+  z-index: 100;
+
   border-radius: 3px;
   margin: 1rem;
 }
 
-.button {
-  background-color: white;
-  border: 0;
-  border-radius: 8px;
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 6rem;
+  height: 3rem;
+}
+
+.spinner {
+  opacity: 0.8;
+}
+
+.button {
+  width: 6rem;
+  height: 3rem;
   font-size: 1.1rem;
   padding: 0.8rem;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {

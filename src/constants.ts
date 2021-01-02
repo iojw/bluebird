@@ -4,10 +4,10 @@ export const SENTIMENT_RANGE = 1;
 
 // Stream
 export const MAX_TWEET_BUBBLES = 30;
-export const MIN_BUBBLE_RADIUS = 15;
+export const MIN_BUBBLE_RADIUS = 20;
 export const MAX_BUBBLE_RADIUS = 30;
-export const MIN_ANIM_DURATION = 2;
-export const MAX_ANIM_DURATION = 4;
+export const MIN_ANIM_DURATION = 3;
+export const MAX_ANIM_DURATION = 5;
 export const ANIM_DURATION_STEP = 0.1;
 export const AVERAGE_TWEET_CHAR = 200;
 export const MAX_RAND_SATURATION = 0.5;

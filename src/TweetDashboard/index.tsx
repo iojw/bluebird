@@ -11,6 +11,7 @@ import Worker from "worker-loader!./tweetWorker.ts";
 import {createTweetFromResponse} from "./tweetUtils";
 import PubNub from "pubnub";
 import {TweetCounter} from "../TweetCounter";
+import Spinner from "react-spinkit";
 
 const worker = new Worker();
 
@@ -79,9 +80,8 @@ export const TweetDashboard = () => {
         className={styles.card}
         tweet={selected}
         paused={paused}
-        emptyMessage="Touch a tweet below to view it here"
+        emptyMessage="Touch a tweet to view it here"
       />
-      <div className={styles["flex-break"]} />
       <TweetStream
         className={styles.stream}
         tweets={state.tweets}
@@ -95,11 +95,22 @@ export const TweetDashboard = () => {
         onSelectTweet={(tweet) => setSelected(tweet)}
       />
       <div className={styles["flex-break"]} />
-      <div className={styles.controls}>
-        <button className={styles.button} onClick={paused ? start : pause}>
+      {state.tweets.length === 0 && !paused ? (
+        <div className={`${styles.card} ${styles.spinnerContainer}`}>
+          <Spinner
+            className={`${styles.spinner}`}
+            name="three-bounce"
+            color="black"
+          />
+        </div>
+      ) : (
+        <button
+          className={`${styles.card} ${styles.button}`}
+          onClick={paused ? start : pause}
+        >
           {paused ? "Start" : "Pause"}
         </button>
-      </div>
+      )}
     </div>
   );
 };
