@@ -5,4 +5,4 @@
 Live link to the application **[here](https://isaacong.me/bluebird/)**
 
 ## Demo
-![Demo GIF](demo.gif)
+![Demo GIF](demo2.gif)
