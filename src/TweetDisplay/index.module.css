@@ -1,7 +1,7 @@
 .container {
   flex-basis: 100%;
-  max-width: 500px;
-  height: 16rem;
+  max-width: 450px;
+  height: 14rem;
 }
 
 .tweet {
@@ -29,23 +29,21 @@
 
 .text {
   padding-top: 1.2rem;
-  font-size: 1.2rem;
   word-wrap: break-word;
 }
 
 .name {
   font-weight: 600;
-  font-size: 1.2rem;
 }
 
 .secondary {
   color: rgb(66, 66, 66);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .emptyMessage {
-  font-size: 1.3rem;
-  padding-top: 7rem;
+  font-size: 1.1rem;
+  padding-top: 6rem;
   text-align: center;
   font-style: italic;
 }

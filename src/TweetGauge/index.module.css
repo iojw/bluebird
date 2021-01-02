@@ -1,7 +1,7 @@
 .container {
   flex-basis: 100%;
-  max-width: 450px;
-  height: 16rem;
+  max-width: 400px;
+  height: 14rem;
   text-align: center;
 
   display: flex;
@@ -17,8 +17,4 @@
 .gauge g {
   stroke: black;
   stroke-width: 0px;
-}
-
-.text {
-  font-size: 1.2rem;
 }

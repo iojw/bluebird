@@ -29,10 +29,6 @@ const App = () => (
           average sentiment of all processed tweets during your current session
           is also calculated.
         </p>
-        <p>
-          Play around with this real-time, constant stream of tweets and its
-          corresponding metrics!
-        </p>
       </div>
     </header>
     <svg
@@ -68,7 +64,7 @@ const App = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Source Repository
+        Repository
       </a>
     </footer>
   </>

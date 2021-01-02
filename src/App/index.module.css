@@ -20,7 +20,7 @@
 
 .header .desc {
   padding-bottom: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   max-width: 1280px;
 }
 
@@ -32,7 +32,7 @@
 .header-wave,
 .footer-wave {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   fill: var(--complement);
 }
 
