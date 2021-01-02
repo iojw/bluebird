@@ -27,9 +27,10 @@ const Tweet = ({tweet}: {tweet: ITweet}) => {
       rel="noopener noreferrer"
     >
       <div style={{backgroundColor: sentimentColour}} className={styles.header}>
-        <span className={styles.name}>{tweet.name}</span>
-        <span className={styles.secondary}>{` @${tweet.username}`}</span>
-        <div className={styles.secondary}>
+        <img alt="Profile" className={styles.dp} src={tweet.dp_url} />
+        <span className={styles.name}>{tweet.name}&nbsp;</span>
+        <span className={styles.secondary}>{`@${tweet.username}`}</span>
+        <div className={`${styles.secondary} ${styles.row2}`}>
           {`${relativeTime} seconds ago · Valence: ${tweet.sentiment}`}
         </div>
       </div>

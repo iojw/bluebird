@@ -29,4 +29,5 @@ export interface ITweet {
   time: number;
   sentiment: number;
   id: number;
+  dp_url: string;
 }

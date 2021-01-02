@@ -4,6 +4,13 @@
   height: 14rem;
 }
 
+.dp {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  padding-right: 0.4rem;
+}
+
 .tweet {
   text-align: left;
   text-decoration: none;
@@ -25,6 +32,11 @@
   margin: -0.5rem;
   padding: 0.5rem;
   border-radius: 5px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
 }
 
 .text {
@@ -39,6 +51,11 @@
 .secondary {
   color: rgb(66, 66, 66);
   font-size: 1rem;
+}
+
+.row2 {
+  flex-basis: 100%;
+  margin-top: 0.25rem;
 }
 
 .emptyMessage {

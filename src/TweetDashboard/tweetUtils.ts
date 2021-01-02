@@ -25,5 +25,6 @@ export const createTweetFromResponse = (message: ITweetResponse): ITweet => {
     time: Number(message.timestamp_ms),
     sentiment: calculateSentiment(sanitizedText),
     id: message.id,
+    dp_url: message.user.profile_image_url_https,
   };
 };
