@@ -1,5 +1,5 @@
 .dashboard {
-  height: 550px;
+  min-height: 550px;
   display: flex;
   position: relative;
 
