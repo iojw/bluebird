@@ -6,8 +6,8 @@
 
 .dp {
   border-radius: 50%;
-  height: 24px;
-  width: 24px;
+  height: 36px;
+  width: 36px;
   padding-right: 0.4rem;
 }
 
@@ -34,9 +34,8 @@
   border-radius: 5px;
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  align-content: space-between;
+  justify-content: flex-start;
 }
 
 .text {
@@ -50,12 +49,12 @@
 
 .secondary {
   color: rgb(66, 66, 66);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .row2 {
   flex-basis: 100%;
-  margin-top: 0.25rem;
+  margin-top: 0.1rem;
 }
 
 .emptyMessage {
